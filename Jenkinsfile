@@ -11,15 +11,19 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
+             script {
                 // Build Docker Image
                 docker.build("angular-app")
+                }
             }
         }
 
         stage('Run Docker Container') {
             steps {
+             script {
                 // Run Docker Container
                 docker.image("angular-app").run("-p 4200:4200 --name angular-container -d")
+                }
             }
         }
 
