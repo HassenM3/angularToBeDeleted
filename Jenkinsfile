@@ -2,7 +2,7 @@ pipeline {
       agent {
             docker {
                 image 'docker:20.10'
-                args '-v ~/Workspace/docker.sock:/var/run/docker.sock'
+                args '-v C:/Users/bouzo/Workspace/docker.sock:/var/run/docker.sock'
             }
         }
 
