@@ -2,12 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout your source code from Git
-                git 'git@github.com:HassenM3/angularToBeDeleted.git'
-            }
-        }
+
 
         stage('Build Docker Image') {
             steps {
