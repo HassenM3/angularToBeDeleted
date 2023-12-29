@@ -1,29 +1,25 @@
 pipeline {
-      agent {
-            docker {
-                image 'docker:20.10'
-                args '-v C:/Users/bouzo/Workspace/docker.sock:/var/run/docker.sock'
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout your source code from Git
+                git 'git@github.com:HassenM3/angularToBeDeleted.git'
             }
         }
 
-    stages {
-
-
         stage('Build Docker Image') {
             steps {
-             script {
                 // Build Docker Image
                 docker.build("angular-app")
-                }
             }
         }
 
         stage('Run Docker Container') {
             steps {
-             script {
                 // Run Docker Container
                 docker.image("angular-app").run("-p 4200:4200 --name angular-container -d")
-                }
             }
         }
 
