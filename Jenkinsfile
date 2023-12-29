@@ -1,8 +1,10 @@
 pipeline {
- agent {
-        label 'dockerhbz'
+   agent {
+        docker {
+            // Use an official Jenkins agent with Docker
+            image 'jenkins/inbound-agent:4.7-1'
+        }
     }
-
     stages {
 
 
