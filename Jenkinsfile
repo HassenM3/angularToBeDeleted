@@ -1,11 +1,5 @@
 pipeline {
-    agent {docker
-       {image 'node:latest'
-       label 'docker-hbz'
-
-
-    }}
-
+    agent any
 
     stages {
 
