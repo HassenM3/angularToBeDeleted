@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-
-                    label 'dockerhbz'
-
-
-    }
+    agent any
 
     stages {
         stage('Build Docker Image') {
