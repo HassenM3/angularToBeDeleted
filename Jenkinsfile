@@ -1,9 +1,8 @@
 pipeline {
     agent {
         docker {
-            // Use an official Jenkins agent with Docker
-            image 'jenkins/inbound-agent:4.7-1'
-            args '-v /var/run/docker.sock:/var/run/docker.sock --network=host'
+                    label 'dockerhbz'
+
         }
     }
 
