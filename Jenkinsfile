@@ -1,9 +1,9 @@
 pipeline {
     agent {
-        docker {
+
                     label 'dockerhbz'
 
-        }
+
     }
 
     stages {
